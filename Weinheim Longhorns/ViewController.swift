@@ -10,11 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var openMenu: UIBarButtonItem!
+    @IBOutlet weak var showInfo: UIBarButtonItem!
+    @IBOutlet weak var logIn: UIBarButtonItem!
+    
+    var isLoggedIn = false;
+    
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        super.viewDidLoad();
     }
 
-
+    @IBAction func onLogInPress(_ sender: UIBarButtonItem) {
+        if isLoggedIn == false {
+            logIn.image = UIImage(named: "person.fill");
+            isLoggedIn = true;
+        }
+    }
+    
 }
 
