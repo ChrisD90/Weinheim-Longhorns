@@ -13,6 +13,8 @@
 		83EFF68A24252AA300B02891 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EFF68824252AA300B02891 /* Main.storyboard */; };
 		83EFF68C24252AA600B02891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EFF68B24252AA600B02891 /* Assets.xcassets */; };
 		83EFF68F24252AA600B02891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EFF68D24252AA600B02891 /* LaunchScreen.storyboard */; };
+		83EFF69924267D6000B02891 /* RosterTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF69824267D6000B02891 /* RosterTableController.swift */; };
+		83EFF69B2426804A00B02891 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF69A2426804A00B02891 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		83EFF68B24252AA600B02891 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83EFF68E24252AA600B02891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83EFF69024252AA600B02891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83EFF69824267D6000B02891 /* RosterTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterTableController.swift; sourceTree = "<group>"; };
+		83EFF69A2426804A00B02891 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				83EFF68B24252AA600B02891 /* Assets.xcassets */,
 				83EFF68D24252AA600B02891 /* LaunchScreen.storyboard */,
 				83EFF69024252AA600B02891 /* Info.plist */,
+				83EFF69824267D6000B02891 /* RosterTableController.swift */,
+				83EFF69A2426804A00B02891 /* Data.swift */,
 			);
 			path = "Weinheim Longhorns";
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83EFF68724252AA300B02891 /* ViewController.swift in Sources */,
+				83EFF69B2426804A00B02891 /* Data.swift in Sources */,
+				83EFF69924267D6000B02891 /* RosterTableController.swift in Sources */,
 				83EFF68324252AA300B02891 /* AppDelegate.swift in Sources */,
 				83EFF68524252AA300B02891 /* SceneDelegate.swift in Sources */,
 			);
