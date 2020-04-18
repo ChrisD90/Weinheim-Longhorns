@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		833A254D244B3AAD0015DF48 /* RosterCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A254C244B3AAD0015DF48 /* RosterCellController.swift */; };
+		833A254F244B3BF50015DF48 /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A254E244B3BF50015DF48 /* PlayerProfile.swift */; };
+		833A2551244B80F50015DF48 /* PopupViewControllerSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */; };
 		83EFF68324252AA300B02891 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68224252AA300B02891 /* AppDelegate.swift */; };
 		83EFF68524252AA300B02891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68424252AA300B02891 /* SceneDelegate.swift */; };
 		83EFF68724252AA300B02891 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68624252AA300B02891 /* ViewController.swift */; };
@@ -14,10 +17,12 @@
 		83EFF68C24252AA600B02891 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83EFF68B24252AA600B02891 /* Assets.xcassets */; };
 		83EFF68F24252AA600B02891 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83EFF68D24252AA600B02891 /* LaunchScreen.storyboard */; };
 		83EFF69924267D6000B02891 /* RosterTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF69824267D6000B02891 /* RosterTableController.swift */; };
-		83EFF69B2426804A00B02891 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF69A2426804A00B02891 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		833A254C244B3AAD0015DF48 /* RosterCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCellController.swift; sourceTree = "<group>"; };
+		833A254E244B3BF50015DF48 /* PlayerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfile.swift; sourceTree = "<group>"; };
+		833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewControllerSort.swift; sourceTree = "<group>"; };
 		83EFF67F24252AA300B02891 /* Weinheim Longhorns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weinheim Longhorns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EFF68224252AA300B02891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EFF68424252AA300B02891 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,7 +32,6 @@
 		83EFF68E24252AA600B02891 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83EFF69024252AA600B02891 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83EFF69824267D6000B02891 /* RosterTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterTableController.swift; sourceTree = "<group>"; };
-		83EFF69A2426804A00B02891 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +72,9 @@
 				83EFF68D24252AA600B02891 /* LaunchScreen.storyboard */,
 				83EFF69024252AA600B02891 /* Info.plist */,
 				83EFF69824267D6000B02891 /* RosterTableController.swift */,
-				83EFF69A2426804A00B02891 /* Data.swift */,
+				833A254C244B3AAD0015DF48 /* RosterCellController.swift */,
+				833A254E244B3BF50015DF48 /* PlayerProfile.swift */,
+				833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */,
 			);
 			path = "Weinheim Longhorns";
 			sourceTree = "<group>";
@@ -145,9 +151,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				83EFF68724252AA300B02891 /* ViewController.swift in Sources */,
-				83EFF69B2426804A00B02891 /* Data.swift in Sources */,
+				833A254D244B3AAD0015DF48 /* RosterCellController.swift in Sources */,
 				83EFF69924267D6000B02891 /* RosterTableController.swift in Sources */,
+				833A2551244B80F50015DF48 /* PopupViewControllerSort.swift in Sources */,
 				83EFF68324252AA300B02891 /* AppDelegate.swift in Sources */,
+				833A254F244B3BF50015DF48 /* PlayerProfile.swift in Sources */,
 				83EFF68524252AA300B02891 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
