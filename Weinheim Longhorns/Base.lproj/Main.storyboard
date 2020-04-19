@@ -26,7 +26,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <segue destination="swl-6O-qZi" kind="show" id="D36-Vr-RhF"/>
+                                            <segue destination="6ct-mG-uU6" kind="show" id="Q4r-B7-fNA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cd7-Ft-bO1">
@@ -104,22 +104,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2488.4057971014495" y="127.90178571428571"/>
-        </scene>
-        <!--newsController-->
-        <scene sceneID="GKX-LT-qq8">
-            <objects>
-                <viewController title="newsController" id="swl-6O-qZi" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Wfk-BO-lS7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="l5o-jA-ZXT"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="News" id="s1p-AJ-s6k"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="QDc-fx-PeQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3612" y="-531"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ocm-6d-PrE">
@@ -261,59 +245,134 @@
                                 </connections>
                             </tableViewCell>
                         </prototypes>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <outlet property="dataSource" destination="9Rm-st-c07" id="DGj-FQ-AiQ"/>
                             <outlet property="delegate" destination="9Rm-st-c07" id="Lyz-Yt-m83"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jJD-jc-CdV">
-                        <rightBarButtonItems>
-                            <barButtonItem title="filter" image="pencil" catalog="system" id="4Ez-sX-Ftd"/>
-                            <barButtonItem title="Sort" image="arrow.up.arrow.down" catalog="system" id="E2U-5x-6AJ">
-                                <connections>
-                                    <action selector="onSortButtonPressed:" destination="9Rm-st-c07" id="CSW-e3-v7d"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Filter" id="ooQ-cZ-91X">
+                            <connections>
+                                <action selector="onFilterButtonPressed:" destination="9Rm-st-c07" id="kWd-V1-Hfm"/>
+                                <segue destination="8QD-SB-Yjn" kind="popoverPresentation" identifier="filterIdentifier" popoverAnchorBarButtonItem="ooQ-cZ-91X" id="s7Z-kV-RAu">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="filterPosition" destination="daO-qt-0BN" id="xjV-8C-f7k"/>
-                        <outlet property="popoverView" destination="oK4-ev-BUm" id="45h-8T-q5i"/>
-                        <outlet property="sortButton" destination="E2U-5x-6AJ" id="yi1-ZN-hDS"/>
+                        <outlet property="btnFilter" destination="ooQ-cZ-91X" id="Cgw-qF-Yab"/>
                         <outlet property="tableView" destination="tqv-9Z-Zly" id="Q46-7I-rqv"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ukI-bu-EaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <view contentMode="scaleToFill" id="oK4-ev-BUm" customClass="PopupViewControllerSort" customModule="Weinheim_Longhorns" customModuleProvider="target">
-                    <rect key="frame" x="0.0" y="0.0" width="177" height="190"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wNZ-d3-Qeq">
-                            <rect key="frame" x="16" y="15" width="0.0" height="0.0"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="daO-qt-0BN">
-                            <rect key="frame" x="40" y="78" width="97" height="34"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                    </subviews>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    <viewLayoutGuide key="safeArea" id="3k2-1d-REi"/>
-                </view>
             </objects>
             <point key="canvasLocation" x="3689.8550724637685" y="342.85714285714283"/>
         </scene>
+        <!--popoverController-->
+        <scene sceneID="spq-cq-E2l">
+            <objects>
+                <viewController title="popoverController" id="8QD-SB-Yjn" customClass="PopoverController" customModule="Weinheim_Longhorns" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4K6-u0-dJm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dta-Yl-9dC">
+                                <rect key="frame" x="121" y="93" width="273" height="102"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filtern:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pwc-S5-ubX">
+                                <rect key="frame" x="20" y="48" width="86" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Position:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbR-xv-M0Q">
+                                <rect key="frame" x="20" y="129" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-KU-TYq">
+                                <rect key="frame" x="192" y="217" width="30" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Ok"/>
+                                <connections>
+                                    <action selector="onConfirmPress:" destination="8QD-SB-Yjn" eventType="touchUpInside" id="OVo-Hu-TOY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="joB-EM-fVb"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnConfirm" destination="b8n-KU-TYq" id="9RK-aj-qgL"/>
+                        <outlet property="positionPicker" destination="dta-Yl-9dC" id="OnJ-g1-EOI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VTI-u7-WCL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3679.7101449275365" y="987.72321428571422"/>
+        </scene>
+        <!--newsController-->
+        <scene sceneID="222-zk-fjq">
+            <objects>
+                <tableViewController title="newsController" id="6ct-mG-uU6" customClass="NewsTableController" customModule="Weinheim_Longhorns" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="lH4-up-k3r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="236" id="h0I-8P-DIT" customClass="NewsCellController" customModule="Weinheim_Longhorns" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="236"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="h0I-8P-DIT" id="uIt-jY-yqq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier steht irgendein Titel" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Oo-oh-uyD">
+                                            <rect key="frame" x="20" y="11" width="254" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QN5-Yq-n2i">
+                                            <rect key="frame" x="282" y="11" width="112" height="84"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hier steht ein sehr sehr langer Beispieltext und ich warte auf den Zeilenumrbuch" textAlignment="justified" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE2-Gk-2Zm">
+                                            <rect key="frame" x="20" y="108" width="374" height="117"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6ct-mG-uU6" id="TGh-j3-3Wo"/>
+                            <outlet property="delegate" destination="6ct-mG-uU6" id="vPc-8e-kmw"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="lSd-3r-1Cz"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8iH-Q2-tcJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3608.6956521739135" y="-536.38392857142856"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="arrow.up.arrow.down" catalog="system" width="128" height="96"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
-        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="skull-300x194" width="300" height="194"/>
     </resources>

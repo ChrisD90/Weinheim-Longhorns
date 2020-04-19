@@ -25,4 +25,8 @@ class PlayerProfile {
         self.longhornSince = longhornSince;
     }
     
+    func getPosition() -> String {
+        return self.position;
+    }
+    
 }

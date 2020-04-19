@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		833A254D244B3AAD0015DF48 /* RosterCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A254C244B3AAD0015DF48 /* RosterCellController.swift */; };
 		833A254F244B3BF50015DF48 /* PlayerProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A254E244B3BF50015DF48 /* PlayerProfile.swift */; };
-		833A2551244B80F50015DF48 /* PopupViewControllerSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */; };
+		833A2557244C605E0015DF48 /* PopoverController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A2556244C605E0015DF48 /* PopoverController.swift */; };
+		833A2559244C77EC0015DF48 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A2558244C77EC0015DF48 /* News.swift */; };
+		833A255B244C793A0015DF48 /* NewsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A255A244C793A0015DF48 /* NewsCellController.swift */; };
+		833A2560244C7CB00015DF48 /* NewsTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 833A255F244C7CB00015DF48 /* NewsTableController.swift */; };
 		83EFF68324252AA300B02891 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68224252AA300B02891 /* AppDelegate.swift */; };
 		83EFF68524252AA300B02891 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68424252AA300B02891 /* SceneDelegate.swift */; };
 		83EFF68724252AA300B02891 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EFF68624252AA300B02891 /* ViewController.swift */; };
@@ -22,7 +25,10 @@
 /* Begin PBXFileReference section */
 		833A254C244B3AAD0015DF48 /* RosterCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterCellController.swift; sourceTree = "<group>"; };
 		833A254E244B3BF50015DF48 /* PlayerProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerProfile.swift; sourceTree = "<group>"; };
-		833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewControllerSort.swift; sourceTree = "<group>"; };
+		833A2556244C605E0015DF48 /* PopoverController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverController.swift; sourceTree = "<group>"; };
+		833A2558244C77EC0015DF48 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		833A255A244C793A0015DF48 /* NewsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCellController.swift; sourceTree = "<group>"; };
+		833A255F244C7CB00015DF48 /* NewsTableController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableController.swift; sourceTree = "<group>"; };
 		83EFF67F24252AA300B02891 /* Weinheim Longhorns.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weinheim Longhorns.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		83EFF68224252AA300B02891 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		83EFF68424252AA300B02891 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		833A255C244C79440015DF48 /* Roster */ = {
+			isa = PBXGroup;
+			children = (
+				83EFF69824267D6000B02891 /* RosterTableController.swift */,
+				833A254C244B3AAD0015DF48 /* RosterCellController.swift */,
+				833A254E244B3BF50015DF48 /* PlayerProfile.swift */,
+				833A2556244C605E0015DF48 /* PopoverController.swift */,
+			);
+			name = Roster;
+			sourceTree = "<group>";
+		};
+		833A255E244C79800015DF48 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				833A2558244C77EC0015DF48 /* News.swift */,
+				833A255A244C793A0015DF48 /* NewsCellController.swift */,
+				833A255F244C7CB00015DF48 /* NewsTableController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
 		83EFF67624252AA300B02891 = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +91,8 @@
 		83EFF68124252AA300B02891 /* Weinheim Longhorns */ = {
 			isa = PBXGroup;
 			children = (
+				833A255E244C79800015DF48 /* News */,
+				833A255C244C79440015DF48 /* Roster */,
 				83EFF68224252AA300B02891 /* AppDelegate.swift */,
 				83EFF68424252AA300B02891 /* SceneDelegate.swift */,
 				83EFF68624252AA300B02891 /* ViewController.swift */,
@@ -71,10 +100,6 @@
 				83EFF68B24252AA600B02891 /* Assets.xcassets */,
 				83EFF68D24252AA600B02891 /* LaunchScreen.storyboard */,
 				83EFF69024252AA600B02891 /* Info.plist */,
-				83EFF69824267D6000B02891 /* RosterTableController.swift */,
-				833A254C244B3AAD0015DF48 /* RosterCellController.swift */,
-				833A254E244B3BF50015DF48 /* PlayerProfile.swift */,
-				833A2550244B80F50015DF48 /* PopupViewControllerSort.swift */,
 			);
 			path = "Weinheim Longhorns";
 			sourceTree = "<group>";
@@ -152,8 +177,11 @@
 			files = (
 				83EFF68724252AA300B02891 /* ViewController.swift in Sources */,
 				833A254D244B3AAD0015DF48 /* RosterCellController.swift in Sources */,
+				833A2559244C77EC0015DF48 /* News.swift in Sources */,
+				833A2560244C7CB00015DF48 /* NewsTableController.swift in Sources */,
+				833A2557244C605E0015DF48 /* PopoverController.swift in Sources */,
+				833A255B244C793A0015DF48 /* NewsCellController.swift in Sources */,
 				83EFF69924267D6000B02891 /* RosterTableController.swift in Sources */,
-				833A2551244B80F50015DF48 /* PopupViewControllerSort.swift in Sources */,
 				83EFF68324252AA300B02891 /* AppDelegate.swift in Sources */,
 				833A254F244B3BF50015DF48 /* PlayerProfile.swift in Sources */,
 				83EFF68524252AA300B02891 /* SceneDelegate.swift in Sources */,
