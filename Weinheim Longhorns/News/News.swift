@@ -12,13 +12,13 @@ import UIKit
 class News {
     
     var title: String;
-    var keywords: String;
+    var keywords: [String];
     var text: String;
-    var date: Date;
+    var date: String;
     var image: UIImage;
     var tag: String;
     
-    init(title: String, keywords: String, text: String, date: Date, image: UIImage, tag: String) {
+    init(title: String, keywords: [String], text: String, date: String, image: UIImage, tag: String) {
         self.title = title;
         self.keywords = keywords;
         self.text = text;
